@@ -1,9 +1,12 @@
-<ul dnd-sortable-container [sortableData]="fields">
-  <li *ngFor="let field of fields; let i = index;" >
-    <span class="lab" dnd-sortable [sortableIndex]="i">{{field.yValue}}</span>
-    <mat-slider [min]="min" [max]="max" 
-                [step]="step" [value]="field.value"
-                [tickInterval]="tickInterval"
-                ></mat-slider>
-  </li>
-</ul>
+<div>
+  <ul dnd-sortable-container [sortableData]="fields">
+    <li *ngFor="let field of fields; let i = index;" >
+      <span class="lab" dnd-sortable [sortableIndex]="i">{{field.yValue}}</span>
+      <mat-slider [min]="min" [max]="max" 
+                  [step]="step" [value]="field.value"
+                  [tickInterval]="tickInterval"
+                  ></mat-slider>
+    </li>
+  </ul>
+  <app-slider></app-slider>
+</div>
